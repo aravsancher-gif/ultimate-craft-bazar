@@ -39,7 +39,7 @@ function renderCart(){
   count.textContent = cart.reduce((s,i)=>s+i.qty,0);
   if(!cart.length){cartItems.innerHTML='<p style="text-align:center;color:#777;padding:35px 10px">Your cart is empty.<br>Add something handmade ✨</p>'}
   else cartItems.innerHTML=cart.map(i=>`<div class="cart-row">
-    ${i.img?`<img src="${i.img}" alt="">`:`<div style="width:58px;height:58px;display:grid;place-items:center;background:#f4f4f4;border-radius:7px;font-size:30px">${i.emoji}</div>`}
+    ${i.img?`<img src="IMG-20260910-WA0004.jpg" alt="">`:`<div style="width:58px;height:58px;display:grid;place-items:center;background:#f4f4f4;border-radius:7px;font-size:30px">${i.emoji}</div>`}
     <div><strong>${i.name}</strong><small>₹${i.price} × ${i.qty}</small></div>
     <button class="remove" data-remove="${i.id}">Remove</button>
   </div>`).join("");
