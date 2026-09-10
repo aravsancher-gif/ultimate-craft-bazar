@@ -1,5 +1,5 @@
 const products = [
-  {id:1,name:"Decorative Bottle",price:100,badge:"Best Seller",img:"assets/decorative-bottle.jpg",availability:"Available in all colors",desc:"Beautiful handcrafted decorative bottle. Perfect for gifting, home decor or personal use.",rating:"★★★★★"},
+  {id:1,name:"Decorative Bottle",price:100,badge:"Best Seller",img:"IMG-20260910-WA0004.jpg",availability:"Available in all colors",desc:"Beautiful handcrafted decorative bottle. Perfect for gifting, home decor or personal use.",rating:"★★★★★"},
   {id:2,name:"Handmade Candle",price:180,badge:"Popular",emoji:"🕯️",availability:"Multiple fragrances",desc:"A charming handmade candle to add warmth and character to your space.",rating:"★★★★★"},
   {id:3,name:"Mini Gift Hamper",price:299,badge:"Gift Pick",emoji:"🎁",availability:"Ready to gift",desc:"A cute collection of little handmade surprises for someone special.",rating:"★★★★☆"},
   {id:4,name:"Decorative Frame",price:249,badge:"New",emoji:"🖼️",availability:"Custom designs",desc:"Handcrafted decorative frame for memories, quotes and thoughtful gifts.",rating:"★★★★★"},
@@ -39,7 +39,7 @@ function renderCart(){
   count.textContent = cart.reduce((s,i)=>s+i.qty,0);
   if(!cart.length){cartItems.innerHTML='<p style="text-align:center;color:#777;padding:35px 10px">Your cart is empty.<br>Add something handmade ✨</p>'}
   else cartItems.innerHTML=cart.map(i=>`<div class="cart-row">
-    ${i.img?`<img src="IMG-20260910-WA0004.jpg" alt="">`:`<div style="width:58px;height:58px;display:grid;place-items:center;background:#f4f4f4;border-radius:7px;font-size:30px">${i.emoji}</div>`}
+    ${i.img?`<img src="${i.img}" alt="">`:`<div style="width:58px;height:58px;display:grid;place-items:center;background:#f4f4f4;border-radius:7px;font-size:30px">${i.emoji}</div>`}
     <div><strong>${i.name}</strong><small>₹${i.price} × ${i.qty}</small></div>
     <button class="remove" data-remove="${i.id}">Remove</button>
   </div>`).join("");
