@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ultimate Craft Bazar — Handmade, unique products specially for you.">
+  <title>Ultimate Craft Bazar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Ultimate Craft Bazar home">
+        <img src="assets/logo.png" alt="Ultimate Craft Bazar logo">
+        <span>
+          <strong>Ultimate <em>Craft</em> Bazar</strong>
+          <small>Handmade <b>•</b> Unique <b>•</b> Specially For You</small>
+        </span>
+      </a>
+
+      <nav id="mainNav" class="nav">
+        <a class="active" href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="searchBtn" class="icon-btn" aria-label="Search">⌕</button>
+        <button class="icon-btn" aria-label="Account">♙</button>
+        <button id="cartBtn" class="cart-btn" aria-label="Cart">🛒 <span id="cartCount">0</span></button>
+        <button id="menuBtn" class="menu-btn" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="container hero-inner">
+        <div class="hero-logo">
+          <img src="assets/logo.png" alt="">
+        </div>
+        <div class="hero-copy">
+          <h1>Ultimate <span>Craft</span> Bazar</h1>
+          <p>Handmade <i>•</i> Unique <i>•</i> Specially For You</p>
+          <div class="tagline">Small Things <b>✦</b> Big Happiness <span>♡</span></div>
+          <a class="gold-btn" href="#shop">Explore Collection <span>→</span></a>
+        </div>
+        <div class="support-card">
+          <div class="lantern">✦</div>
+          <strong>Support<br>Small<br>Business</strong>
+          <span>♡</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="container benefit-grid">
+        <div class="benefit"><span class="benefit-icon">🚚</span><div><strong>Fast Delivery</strong><small>Across India</small></div></div>
+        <div class="benefit"><span class="benefit-icon">♢</span><div><strong>Secure Payment</strong><small>100% Safe</small></div></div>
+        <div class="benefit"><span class="benefit-icon">✪</span><div><strong>Best Quality</strong><small>Handpicked Products</small></div></div>
+        <div class="benefit"><span class="benefit-icon">♡</span><div><strong>Customer Support</strong><small>We're Here to Help</small></div></div>
+      </div>
+    </section>
+
+    <section id="shop" class="products-section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <h2>Our Products</h2>
+            <span class="heading-line"></span>
+          </div>
+          <button class="gold-btn small" id="viewAllBtn">View All <span>→</span></button>
+        </div>
+        <div id="searchPanel" class="search-panel">
+          <input id="searchInput" type="search" placeholder="Search handmade products...">
+        </div>
+        <div id="productGrid" class="product-grid"></div>
+        <p id="emptyState" class="empty-state" hidden>No products found. Try another search.</p>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">OUR STORY</p>
+          <h2>Little crafts.<br><span>Big happiness.</span></h2>
+          <p>Ultimate Craft Bazar brings together handmade, thoughtful and unique pieces made for gifting, decorating and adding a little joy to everyday life.</p>
+        </div>
+        <div class="about-points">
+          <div><b>01</b><span>Handpicked products</span></div>
+          <div><b>02</b><span>Made with care</span></div>
+          <div><b>03</b><span>Specially for you</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-row">
+          <img src="assets/logo.png" alt="">
+          <div><strong>Ultimate <em>Craft</em> Bazar</strong><small>Handmade • Unique • Specially For You</small></div>
+        </div>
+        <p>Small things, made with love.</p>
+      </div>
+      <div><h3>Quick Links</h3><a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">About Us</a><a href="#contact">Contact</a></div>
+      <div><h3>Follow Us</h3><div class="socials"><a href="#" aria-label="WhatsApp">◉</a><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="YouTube">▶</a></div></div>
+      <div><h3>Contact Us</h3><p>✉ ultimatecraftbazar@gmail.com</p><p>⌖ India</p></div>
+    </div>
+    <div class="container copyright">© 2026 Ultimate Craft Bazar. All rights reserved.</div>
+  </footer>
+
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true">
+    <div class="cart-head"><h2>Your Cart</h2><button id="closeCart">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-bottom">
+      <div><span>Total</span><strong id="cartTotal">₹0</strong></div>
+      <button id="checkoutBtn" class="gold-btn">Proceed to Checkout →</button>
+    </div>
+  </aside>
+  <div id="overlay" class="overlay"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
